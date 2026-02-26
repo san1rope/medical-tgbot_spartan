@@ -1,0 +1,3 @@
+aiogram~=3.25.0
+sqlalchemy==1.3.24
+gino==1.0.1
