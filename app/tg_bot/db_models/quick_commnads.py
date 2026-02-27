@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union, List
 
 from asyncpg import UniqueViolationError
 
@@ -19,7 +19,7 @@ class DbQuestionSchema:
         self.answer_text = answer_text
         self.answer_photo_files_id = answer_photo_files_id
 
-    async def add(self) -> Union[Account, None, bool]:
+    async def add(self) -> Union[QuestionSchema, None, bool]:
         try:
             target = QuestionSchema(
                 tg_user_id=self.tg_user_id, question_text=self.question_text,

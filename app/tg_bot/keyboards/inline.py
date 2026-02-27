@@ -5,9 +5,12 @@ class InlineMarkups:
 
     GENERAL_MENU = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="Задать вопрос", callback_data="ask_question")
+            InlineKeyboardButton(text="❔ Задать вопрос", callback_data="ask_question")
         ],
         [
-            InlineKeyboardButton(text="Мои вопросы", callback_data="my_questions")
+            InlineKeyboardButton(text="❓ Мои вопросы", callback_data="my_questions")
+        ],
+        [
+            InlineKeyboardButton(text="👨‍⚕️ Стать консультантом", callback_data="become_consultant")
         ]
     ])

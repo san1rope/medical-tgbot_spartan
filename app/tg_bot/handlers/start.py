@@ -25,7 +25,3 @@ async def cmd_start(message: Union[types.Message, types.CallbackQuery], state: F
         "\n<b>Используйте клавиатуру под сообщением либо команды</b>"
     ]
     await Ut.send_step_message(state=state, text="\n".join(text), markup=Im.GENERAL_MENU)
-
-
-
-
