@@ -20,7 +20,9 @@ async def main():
         Config.DISPATCHER.include_routers(*routers)
 
     bot_commands = [
-        BotCommand(command="start", description="Главное меню")
+        BotCommand(command="start", description="Главное меню"),
+        BotCommand(command="ask_question", description="Задать вопрос"),
+        BotCommand(command="my_questions", description="Мои вопросы")
     ]
     await Config.BOT.set_my_commands(commands=bot_commands)
 
