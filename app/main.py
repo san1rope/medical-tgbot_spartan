@@ -15,6 +15,7 @@ async def main():
     Config.logger = logger
 
     await connect_to_db(remove_data=Config.DATABASE_CLEANUP)
+    await Ut.load_data()
 
     if routers:
         Config.DISPATCHER.include_routers(*routers)

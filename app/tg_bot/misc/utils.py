@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 from pathlib import Path
@@ -89,3 +90,8 @@ class Utils:
         logger.addHandler(file_handler)
 
         return logger
+
+    @staticmethod
+    async def load_data():
+        with open(os.path.abspath("app/tg_bot/misc/data/keyboard_buttons.json"), "r", encoding="utf-8") as file:
+            Config.KEYBOARD_BUTTONS = json.load(file)

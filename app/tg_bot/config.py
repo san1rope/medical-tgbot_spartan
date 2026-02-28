@@ -1,7 +1,7 @@
 import os
 from logging import Logger
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
@@ -34,3 +34,5 @@ class Config:
     DB_PASSWORD = os.getenv("DB_PASSWORD").strip()
     DB_HOST = os.getenv("DB_HOST").strip()
     DB_NAME = os.getenv("DB_NAME").strip()
+
+    KEYBOARD_BUTTONS: Dict = {}
